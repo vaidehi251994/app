@@ -1,0 +1,39 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY3MjQ5OTIsImV4cCI6MTYwNjcyODU5MiwiYXVkIjoiNWZjNGFkODBlYjA1ZmUxYjA4ZDIzOTg2IiwiaXNzIjoiYW5raXRqYWluIn0.z0FO0ubq3XiaNeZPxuF4UKpzEq2GXJuhkOiABehDuqA
+
+###Login Route
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "anuj@gmail.com",
+  "password": "123456789"
+}
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "anuja@gmail.com",
+  "password": "123456789",
+  "fname": "anuj",
+  "lname": "dixit",
+  "phone": "2345678956",
+  "insta":" ",
+  "facebook": " ",
+  "linkedin": " ",
+  "city": "Delhi",
+  "address": "Hari Nagar"
+}
+
+
+### Refresh token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY3MTA3NDIsImV4cCI6MTYzODI2ODM0MiwiYXVkIjoiNWZjNDc1ZDY2NWNjYjExN2ZjYzVlZGU1IiwiaXNzIjoiYW5raXRqYWluIn0.1NXudiNO79GCoNukIR22z9bOGisSE2LGPIMC3--EUNc"
+}
+
+### Logout Route
+DELETE  http://localhost:3000/auth/logout
