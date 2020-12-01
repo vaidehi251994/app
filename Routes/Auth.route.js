@@ -8,8 +8,6 @@ const { signAccessToken, signRefreshToken, verifyRefreshToken } = require('../he
 
 router.post('/register', async (req, res, next) => {
     try {
-        // const { email, password } = req.body
-        // if(!email || !password) throw createHttpError.BadRequest()
 
         const result = await authSchema.validateAsync(req.body)
 
