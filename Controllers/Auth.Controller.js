@@ -1,6 +1,6 @@
 const createHttpError = require('http-errors')
 const User = require('../Models/User.model')
-const { authSchema, logSchema } = require('../helpers/validation_schema')
+const { authSchema, loginSchema } = require('../helpers/validation_schema')
 const { signAccessToken, signRefreshToken, verifyRefreshToken } = require('../helpers/jwt_helper')
 
 
@@ -27,7 +27,7 @@ register:  async (req, res, next) => {
 
 login: async (req, res, next) => {
     try {
-        const result = await logSchema.validateAsync(req.body)
+        const result = await loginSchema.validateAsync(req.body)
         const user = await User.findOne({ email: result.email })
         if (!user) throw createHttpError.NotFound("user not registered")
 
