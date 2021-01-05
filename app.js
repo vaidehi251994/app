@@ -4,9 +4,11 @@ const createError = require('http-errors')
 require('dotenv').config()
 require('./helpers/init_mongodb')
 const { verifyAccessToken } = require('./helpers/jwt_helper')
-
 const AuthRoute = require('./Routes/Auth.route')
-
+const ContactRoute = require('./Routes/contact.route')
+const bodyParser = require('body-parser')
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+//
 const app = express()
 app.use(morgan('dev'))
 app.use(express.json())
@@ -21,6 +23,7 @@ app.use('/auth', AuthRoute)
 app.use(async (req, res, next ) => {
     next(createError.NotFound('This route does not exist'))
 })
+app.use('/con',ContactRoute)
 
 app.use((err, req, res, next) => {
     res.status(err.status || 500)
@@ -38,4 +41,4 @@ const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
-})
+});
