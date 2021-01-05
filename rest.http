@@ -37,3 +37,20 @@ Content-Type: application/json
 
 ### Logout Route
 DELETE  http://localhost:3000/auth/logout
+
+GET http://localhost:3000
+ "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDk4NTc4MTgsImV4cCI6MTYwOTg2MTQxOCwiYXVkIjoiNWZmNDdiMWEyODA5NjE1MjI0NzZjYTgyIiwiaXNzIjoiYW5raXRqYWluIn0.j9q5CgloLk0PHrJ8KxQAjcjklylOv1Bp_e_U1QmUu50",
+
+
+###Contact Route
+POST http://localhost:3000/con/contact
+
+Content-Type: application/json
+{
+  "username":"vaidehi"
+  "email":"vaidehi@gmail.com"
+  "category":"enquiry"
+  "associty":"lucknow"
+  "message":"i am an employee of desreach ."
+  "verifycode":2234
+}

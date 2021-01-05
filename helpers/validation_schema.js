@@ -17,7 +17,17 @@ const loginSchema = Joi.object({
   email: Joi.string().email().lowercase().required(),
   password: Joi.string().min(8).required(),
 })
+const contactSchema = Joi.object({
+  name:Joi.string().required(),
+  email: Joi.string().email().lowercase().required(),
+  category:Joi.string().required(),
+  associty:Joi.string().required(),
+  message:Joi.string().required(),
+  verifycode:Joi.number().required(),
+
+})
+
 
 module.exports = {
-  authSchema, loginSchema
+  authSchema,loginSchema,contactSchema
 }
