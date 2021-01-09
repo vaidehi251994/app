@@ -6,6 +6,7 @@ require('./helpers/init_mongodb')
 const { verifyAccessToken } = require('./helpers/jwt_helper')
 
 const AuthRoute = require('./Routes/Auth.route')
+const myProfile = require('./Routes/my-profile.route')
 
 const app = express()
 app.use(morgan('dev'))
@@ -17,7 +18,8 @@ app.get('/', verifyAccessToken, async(req, res, next ) => {
 })
 
 app.use('/auth', AuthRoute)
-
+app.use('/',myProfile)
+//app.use('/',updateProfile)
 app.use(async (req, res, next ) => {
     next(createError.NotFound('This route does not exist'))
 })

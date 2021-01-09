@@ -37,3 +37,39 @@ Content-Type: application/json
 
 ### Logout Route
 DELETE  http://localhost:3000/auth/logout
+
+### get profile Route
+GET http://localhost:3000/getProfile
+
+
+### update profile Route
+PUT http://localhost:3000/updateProfile
+Content-Type: application/json
+
+{
+  "email": "anuja@gmail.com",
+  "fname": "shraddha",
+  "lname": "gautam",
+  "phone": "9856231475",
+  "insta": " ",
+  "facebook": " ",
+  "linkedin": " ",
+  "city": "Gurgaon",
+  "address": "Hanuman Nagar",
+  "bio": "create you own sunshine dddddd ffffff ggggggg hhhhh",
+  "dateOfBirth": "1994-03-26",
+  "gender": "female",
+  "designation":"backend deeveloper",
+  "image": " "
+}
+
+
+### delete profile Route
+DELETE http://localhost:3000/deleteProfile
+Content-Type: application/json
+
+{
+"email": "anuja@gmail.com"
+}
+
+

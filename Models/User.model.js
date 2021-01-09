@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 
 const UserSchema = new Schema({
@@ -46,6 +46,29 @@ const UserSchema = new Schema({
     },
     address: {
         type: String,
+    },
+       bio : {
+        type : String ,
+        required: true,
+         lowercase: true,
+     },
+     dateOfBirth : {
+         type : Date,
+        requried: true,
+     },
+    gender : {
+        type : String,
+        enum : ["male","female"],
+        requried: true,
+    },
+    designation : {
+        type : String,
+        requried : true,
+    },
+     image : {
+            data : Buffer,
+           type : String,
+            requried : true,
     },
 },
     {
