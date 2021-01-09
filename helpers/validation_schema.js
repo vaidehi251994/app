@@ -18,7 +18,7 @@ const loginSchema = Joi.object({
   password: Joi.string().min(8).required(),
 })
 const contactSchema = Joi.object({
-  name:Joi.string().required(),
+  username:Joi.string().required(),
   email: Joi.string().email().lowercase().required(),
   category:Joi.string().required(),
   associty:Joi.string().required(),

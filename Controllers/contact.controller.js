@@ -8,7 +8,7 @@ module.exports = {
             const result = await contactSchema.validateAsync(req.body)
              const contact = new Contact(result)
              const savedContact = await contact.save()
-
+            console.log(savedContact);
              res.send({savedContact })
              
         } catch (error) {
