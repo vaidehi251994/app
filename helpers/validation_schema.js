@@ -10,12 +10,17 @@ const authSchema = Joi.object({
   facebook: Joi.string(),
   linkedin: Joi.string(),
   city: Joi.string().required(),
-  address: Joi.string()
+  address: Joi.string(),
+  bio: Joi.string().min(20).required(),
+  dateOfBirth: Joi.date(),
+  image:Joi.string().required(),
+  gender:Joi.string(),
+  designation:Joi.string()
 })
 
 const loginSchema = Joi.object({
   email: Joi.string().email().lowercase().required(),
-  password: Joi.string().min(8).required(),
+  password: Joi.string().min(8).required()
 })
 const contactSchema = Joi.object({
   username:Joi.string().required(),
@@ -29,5 +34,5 @@ const contactSchema = Joi.object({
 
 
 module.exports = {
-  authSchema,loginSchema,contactSchema
+  authSchema,loginSchema,contactSchema,myProfileDelete
 }
