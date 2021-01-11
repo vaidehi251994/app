@@ -14,9 +14,9 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "email": "anuja@gmail.com",
+  "email": "shiv@gmail.com",
   "password": "123456789",
-  "fname": "anuj",
+  "fname": "shiv",
   "lname": "dixit",
   "phone": "2345678956",
   "insta":" ",
@@ -46,8 +46,8 @@ POST http://localhost:3000/con/createContact
 Content-Type: application/json
 
 {
-  "username":"vidhi",
-  "email":"vidhi@gmail.com",
+  "username":"ashi",
+  "email":"sidharth@gmail.com",
   "category":"enquiry",
   "associty":"lucknow",
   "message":"i am an employee of desreach .",
