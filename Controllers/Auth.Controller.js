@@ -1,15 +1,14 @@
 const createHttpError = require('http-errors')
 const User = require('../Models/User.model')
+
 const { authSchema, loginSchema } = require('../helpers/validation_schema')
 const { signAccessToken, signRefreshToken, verifyRefreshToken } = require('../helpers/jwt_helper')
-
 
 module.exports = {
 register:  async (req, res, next) => {
     try {
         const result = await authSchema.validateAsync(req.body)
-
-         const doesExist = await User.findOne({ email: result.email})
+        const doesExist = await User.findOne({ email: result.email})
          if (doesExist) 
             throw createHttpError.Conflict(`${result.email} is already been registered`)
 

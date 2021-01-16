@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const authSchema = Joi.object({
   email: Joi.string().email().lowercase().required(),
   password: Joi.string().min(8).required(),
+  username:Joi.string().lowercase().required(),
   fname: Joi.string().lowercase().required(),
   lname: Joi.string().lowercase().required(),
   phone: Joi.number(),

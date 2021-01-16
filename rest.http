@@ -6,7 +6,7 @@ POST  http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "anuj@gmail.com",
+  "email": "vaidehi@gmail.com",
   "password": "123456789"
 }
 ###Register Route
@@ -14,15 +14,11 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "email": "shiv@gmail.com",
+  "email": "vishal@gmail.com",
   "password": "123456789",
-  "fname": "shiv",
-  "lname": "dixit",
-  "phone": "2345678956",
-  "email": "sujata@gmail.com",
-  "password": "0002323235",
-  "fname": "suji",
-  "lname": "shukla",
+  "username":"vaidehi",
+  "fname": "vaidehi",
+  "lname": "mishra",
   "phone": "9856234526",
   "insta":" ",
   "facebook": " ",
@@ -35,7 +31,6 @@ Content-Type: application/json
   "designation":"backend deeveloper",
   "image": " "
 }
-
 
 ### Refresh token Route
 POST http://localhost:3000/auth/refresh-token
@@ -50,18 +45,19 @@ DELETE  http://localhost:3000/auth/logout
 
 GET http://localhost:3000
  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDk4NTc4MTgsImV4cCI6MTYwOTg2MTQxOCwiYXVkIjoiNWZmNDdiMWEyODA5NjE1MjI0NzZjYTgyIiwiaXNzIjoiYW5raXRqYWluIn0.j9q5CgloLk0PHrJ8KxQAjcjklylOv1Bp_e_U1QmUu50",
+
 ### get profile Route
 GET http://localhost:3000/getProfile
-
 
 ### update profile Route
 PUT http://localhost:3000/updateProfile
 Content-Type: application/json
 
 {
-  "email": "sujata@gmail.com",
-  "fname": "sona",
-  "lname": "garg",
+  "username":"vaidehi",
+  "email": "vaidehi@gmail.com",
+  "fname": "sonlma",
+  "lname": "garlg",
   "phone": "9856231476",
   "insta": " ",
   "facebook": " ",
@@ -75,15 +71,13 @@ Content-Type: application/json
   "image": " ",
   "password": "123456789"
 }
-
-
 ### Contact Route
 POST http://localhost:3000/con/createContact
 Content-Type: application/json
 
 {
-  "username":"arshi",
-  "email":"arshi@gmail.com",
+  "username":"arshita",
+  "email":"ashi@gmail.com",
   "category":"enquiry",
   "associty":"lucknow",
   "message":"i am an employee of desreach .",

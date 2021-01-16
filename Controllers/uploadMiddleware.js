@@ -1,5 +1,6 @@
 const multer = require('multer');
 const express = require('express')
+const userImage = require('../Models/User.model')
 
 const upload = multer({
   limits: {
