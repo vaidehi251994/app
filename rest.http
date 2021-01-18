@@ -83,3 +83,12 @@ Content-Type: application/json
   "message":"i am an employee of desreach .",
   "verifycode":"2234"
 }
+
+# ### Image Upload
+# POST http://localhost:3000/upload
+
+# Content-Type: text/plain
+# {
+# "image":"vaidehi.png",
+
+# }
