@@ -54,9 +54,9 @@ PUT http://localhost:3000/updateProfile
 Content-Type: application/json
 
 {
-  "username":"vaidehi",
-  "email": "vaidehi@gmail.com",
-  "fname": "sonlma",
+  "username":"mahi",
+  "email": "sujat@gmail.com",
+  "fname": "sonlm",
   "lname": "garlg",
   "phone": "9856231476",
   "insta": " ",
@@ -82,4 +82,16 @@ Content-Type: application/json
   "associty":"lucknow",
   "message":"i am an employee of desreach .",
   "verifycode":"2234"
+}
+
+
+### Mailer Route
+POST http://localhost:3000/mailer
+Content-Type: application/json
+
+{
+  "from" : "shraddha@desreach.com",
+   "to" : "rhtg12@gmail.com",
+   "subject" : "welcome to desreach ",
+    "text" : "hello "
 }

@@ -10,7 +10,8 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 const path = require('path')
 const router = require('./Routes/image.route')
-const myProfile = require('./Routes/myProfile.route')
+const myProfile = require('./Routes/my-profile.route')
+const mailer = require('./Routes/mailer.route')
 
 const app = express()
 app.use(morgan('dev'))
@@ -23,6 +24,7 @@ app.get('/', verifyAccessToken, async(req, res, next ) => {
 app.use('/auth', AuthRoute)
 app.use('/con',ContactRoute)
 app.use('/' ,myProfile)
+app.use('/',mailer)
 app.use(async (req, res, next ) => {
     next(createError.NotFound('This route does not exist'))
 })
