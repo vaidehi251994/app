@@ -6,7 +6,7 @@ POST  http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "vaidehi@gmail.com",
+  "email": "ritik@gmail.com",
   "password": "123456789"
 }
 ###Register Route
@@ -14,7 +14,7 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "email": "vishal@gmail.com",
+  "email": "ram@gmail.com",
   "password": "123456789",
   "username":"vaidehi",
   "fname": "vaidehi",
@@ -95,3 +95,23 @@ Content-Type: application/json
    "subject" : "welcome to desreach ",
     "text" : "hello "
 }
+
+
+### get profile by Email
+GET http://localhost:3000/getProfileByEmail
+Content-Type: application/json
+
+{
+  "email" : "ram@gmail.com"
+}
+
+# ### Image Upload
+# POST http://localhost:3000/upload
+
+# Content-Type: text/plain
+# {
+# "image":"vaidehi.png",
+
+# }
+
+

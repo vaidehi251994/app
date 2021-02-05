@@ -7,6 +7,7 @@ module.exports = {
         try {
             const userProfiles =await User.find().exec();
             console.log(userProfiles)
+            res.send(userProfiles)
          } catch (error) {
             if (error.isJoi === true) error.status = 422
             next(error)
@@ -45,8 +46,27 @@ module.exports = {
               if (error.isJoi === true) error.status = 422
                next(error)
            }
+        },
+        getProfileByEmail: async (req, res, next) => {
+            try{
+                const userProfiles=await User.findOne({email:req.body.email})
+                console.log(userProfiles)
+                res.send(userProfiles)
+            }catch(error){
+                if (error.isJoi === true) error.status = 422
+                next(error)
+            }
+
         }
-    }  
+    }
+        
+
+        
+                
+
+        
+    
+ 
 
 
 
