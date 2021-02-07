@@ -105,6 +105,14 @@ Content-Type: application/json
   "email" : "ram@gmail.com"
 }
 
+
+### get profile By Id
+GET http://localhost:3000/getProfileById/5ffc33b6fa99a24c4cb798de
+
+
+
+
+
 # ### Image Upload
 # POST http://localhost:3000/upload
 

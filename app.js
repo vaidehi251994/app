@@ -12,7 +12,7 @@ const path = require('path')
 const router = require('./Routes/image.route')
 const myProfile = require('./Routes/my-profile.route')
 const mailer = require('./Routes/mailer.route')
-
+const cors = require('cors')
 const fs = require('fs')
 const route = require('./Routes/image.route')
 //const myProfile = require('./Routes/myProfile.route')
@@ -20,6 +20,7 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(__dirname + 'public'));
 app.get('/img', function(req, res) {
@@ -40,6 +41,7 @@ app.use('/auth', AuthRoute)
 app.use('/con',ContactRoute)
 app.use('/' ,myProfile)
 app.use('/',mailer)
+
 
 app.use('/',route,(req,res)=>{
     res.send("hi upload")

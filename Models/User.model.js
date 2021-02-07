@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const bcrypt = require('bcrypt')
+const { string } = require('@hapi/joi')
 
 const UserSchema = new Schema({
     email: {
